@@ -237,7 +237,7 @@ fn expand_tracing_init(attribute_args: &AttributeArgs) -> Tokens {
     quote! {
       ::test_log::tracing_subscriber::EnvFilter::builder()
         .with_default_directive(
-          ::test_log::tracing_subscriber::filter::LevelFilter::INFO.into()
+          ::test_log::tracing_subscriber::filter::LevelFilter::TRACE.into()
         )
         .from_env_lossy()
     }
